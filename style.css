@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #101827, #174d55);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 15px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #57e6c1;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #c7d5df;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 370px;
+    background: #1c2938;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px #0005;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tabs button {
+    flex: 1;
+    background: #314256;
+    color: white;
+}
+
+.tabs button.active {
+    background: #18b99a;
+    color: #071d1a;
+}
+
+#display {
+    width: 100%;
+    height: 75px;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #101923;
+    color: #57e6c1;
+    text-align: right;
+    font-size: 28px;
+    outline: none;
+}
+
+.buttons,
+.scientific-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+}
+
+button {
+    min-width: 0;
+    min-height: 52px;
+    border: none;
+    border-radius: 10px;
+    background: #304154;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #47627a;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.operator {
+    background: #176e77;
+}
+
+.special {
+    background: #87542f;
+}
+
+.equals {
+    background: #18b99a;
+    color: #071d1a;
+    font-weight: bold;
+}
+
+.scientific-buttons {
+    margin-top: 12px;
+}
+
+.scientific-buttons button {
+    background: #453e78;
+    font-size: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.note {
+    text-align: center;
+    color: #bdcad6;
+    font-size: 12px;
+    margin: 16px 0 0;
+}
+
+footer {
+    margin-top: 20px;
+    color: #c7d5df;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 14px;
+    }
+
+    button {
+        min-height: 46px;
+    }
+}
